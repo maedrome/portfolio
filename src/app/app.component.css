@@ -1,0 +1,135 @@
+/* Estilos personalizados adicionales */
+
+nav {
+  background: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav.scrolled {
+  background: rgba(15, 15, 15, 0.95);
+  border-bottom-color: rgba(38, 38, 38, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 0.5em
+}
+
+
+
+.experience-tab {
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: #9ca3af;
+}
+
+.project-card {
+  background: transparent;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-link {
+  background: rgba(239, 68, 68, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: #dc2626;
+  transition: all 0.3s ease;
+}
+
+.icon-link:hover {
+  background: #dc2626;
+  color: #fafafa;
+  transform: translateY(-2px);
+}
+
+.skill-badge {
+  padding: 0.5rem 1rem;
+  background: rgba(239, 68, 68, 0.05);
+  color: #9ca3af;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid #262626;
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #dc2626;
+  color: #dc2626;
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover span:not(.text-red-500) {
+  color: #dc2626;
+}
+
+.animate-fade-in {
+  animation: fadeIn 500ms ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scrollbar personalizado para el body */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #dc2626 #0f0f0f;
+}
+
+html::-webkit-scrollbar {
+  width: 12px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 6px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+.section-bridge {
+  height: 28vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #9ca3af;
+  opacity: 0.75;
+}
+
+.design-container {
+      padding: 2rem;
+      background-color: #0f0f0f;
+    }

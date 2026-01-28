@@ -1,1 +1,323 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+/* Tema y configuración personalizada */
+@theme {
+  /* Paleta de colores personalizada */
+  --color-primary: #0f0f0f;
+  --color-secondary: #1a1a1a;
+  --color-neutral: #262626;
+  --color-primary-content: #fafafa;
+  --color-secondary-content: #9ca3af;
+  
+  /* Rojo como acento/evento */
+  --color-accent: #dc2626;
+  --color-accent-secondary: #991b1b;
+  --color-accent-content: #fca5a5;
+
+  /* Fuentes personalizadas */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+}
+
+/* Estilos base personalizados */
+@layer base {
+  * {
+    @apply border-neutral;
+  }
+
+  body {
+    @apply antialiased;
+    background-color: #0f0f0f;
+    color: #fafafa;
+    font-family: var(--font-sans);
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+  }
+  section {
+    scroll-margin-top: 80px; /* altura real del navbar */
+  }
+  @media (max-width: 767px) {
+  section {
+    scroll-margin-top: 64px; /* navbar en mobile */
+  }
+}
+}
+
+/* Componentes reutilizables */
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 rounded font-semibold transition-all duration-300;
+    background-color: #dc2626;
+    color: #fafafa;
+  }
+
+  .btn-primary:hover {
+    background-color: #dc2626;
+  }
+
+  .btn-outline {
+    @apply px-8 py-3 rounded transition-all duration-300;
+    border: 1px solid #dc2626;
+    color: #dc2626;
+  }
+
+  .btn-outline:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+  }
+
+  .section-padding {
+    @apply py-20 px-6;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .card {
+    @apply rounded-lg p-6;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded transition-colors duration-300;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    color: #fafafa;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: #dc2626;
+  }
+}
+
+/* Utilidades personalizadas */
+@layer utilities {
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #dc2626, #f87171);
+  }
+
+  .backdrop-blur-custom {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: #dc2626 #0f0f0f;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background-color: #0f0f0f;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #dc2626;
+    border-radius: 0.375rem;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background-color: #dc2626;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    50.01%, 100% { opacity: 0; }
+  }
+
+  .blink {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity:100;
+      transform: scale(1);
+    }
+  }
+  .animate-scale-in {
+    animation: scale-in 200ms ease-out;
+    animation-fill-mode: both;
+  }
+
+  @keyframes description-appears {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity:100;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-description-appears {
+    animation: description-appears 150ms ease-out;
+    animation-fill-mode: both;
+  }
+
+  .animate-title-appears{
+    animation: description-appears 200ms ease-out;
+    animation-fill-mode: both;
+  }
+
+  @keyframes bounce-subtle {
+    0%, 100% {
+      transform: translateY(0)
+    }
+    50% {
+      transform: translateY(-5px)
+    }
+  }
+
+  .animate-bounce-subtle{
+    animation: bounce-subtle 2s ease-in-out infinite;
+  }
+
+  @keyframes fade-from-left {
+    0%{
+      opacity: 0;
+      transform: translateX(-30px)
+    }
+    100%{
+      opacity: 100;
+      transform: translateX(0px);
+    }
+  }
+
+  .animate-fade-from-left{
+    animation: fade-from-left 800ms ease-in-out;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fade-from-bottom {
+    0%{
+      opacity: 0;
+      transform: translatey(30px)
+    }
+    100%{
+      opacity: 100;
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-fade-from-bottom{
+    animation: fade-from-bottom 800ms ease-in-out;
+    animation-fill-mode: both;
+  }
+
+  @keyframes appear-from-bottom{
+    0%{
+      opacity:0;
+      transform: translateY(20px)
+    }
+    50%{
+      opacity:100
+    }
+    100%{
+      transform: translateY(0px)
+    }
+  }
+
+  .animate-appear-from-bottom{
+    animation: appear-from-bottom 500ms ease-in-out;
+    animation-fill-mode: both;
+  }
+
+  body {
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-project-card{
+    0%{
+      opacity:0;
+      transform: translateY(30px)
+    }
+    50%{
+      opacity:1
+    }
+    100%{
+      transform: translateY(0px)
+    }
+  }
+  
+  .animate-fade-project-card{
+    animation: fade-project-card 900ms ease-in-out;
+    animation-fill-mode: both;
+  }
+
+  
+  @keyframes skill-badge-appear{
+    0%{
+      opacity:0;
+      transform: translateY(20px)
+    }
+    50%{
+      opacity:1;
+      transform: translateY(-5px);
+    }
+    80%{
+      transform: translateY(2px)
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-skill-badge-appear{
+    animation: skill-badge-appear 800ms ease-in-out;
+    animation-fill-mode:both;
+  }
+
+  @keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animación de salida */
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+.animate-slide-out-right {
+  animation: slideOutRight 0.3s ease-out forwards;
+}
+
+
+}
