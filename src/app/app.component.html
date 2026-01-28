@@ -22,7 +22,7 @@
         </div>
 
         <div class="hidden md:flex">
-          <a href="assets/resume.pdf" download="Marcelo_Romero_Resume.pdf" target="_blank" class="px-4 py-2 rounded-md transition-all border-accent/50 border text-red-500 hover:bg-accent/10 hover:border-accent">
+          <a href="assets/MarceloRomeroCV.pdf" target="_blank" class="px-4 py-2 rounded-md transition-all border-accent/50 border text-red-500 hover:bg-accent/10 hover:border-accent">
             Resume
           </a>
         </div>
@@ -36,27 +36,6 @@
         </button>
       </div>
     </div>
-
-    <!-- Mobile Menu -->
-    <!-- <div *ngIf="isMenuOpen" class="md:hidden backdrop-blur-sm" style="background-color: rgba(26, 26, 26, 0.95);">
-      <div class="px-6 py-4 space-y-3">
-        <a (click)="scrollToSection('about')" class="block cursor-pointer transition-colors hover:text-red-500" style="color: #9ca3af;">
-          <span class="mr-2" style="color: #dc2626;">01.</span>Sobre mí
-        </a>
-        <a (click)="scrollToSection('experience')" class="block cursor-pointer transition-colors hover:text-red-500" style="color: #9ca3af;">
-          <span class="mr-2" style="color: #dc2626;">02.</span>Experiencia
-        </a>
-        <a (click)="scrollToSection('projects')" class="block cursor-pointer transition-colors hover:text-red-500" style="color: #9ca3af;">
-          <span class="mr-2" style="color: #dc2626;">03.</span>Proyectos
-        </a>
-        <a (click)="scrollToSection('skills')" class="block cursor-pointer transition-colors hover:text-red-500" style="color: #9ca3af;">
-          <span class="mr-2" style="color: #dc2626;">04.</span>Habilidades
-        </a>
-        <a (click)="scrollToSection('contact')" class="block cursor-pointer transition-colors hover:text-red-500" style="color: #9ca3af;">
-          <span class="mr-2" style="color: #dc2626;">05.</span>Contacto
-        </a>
-      </div>
-    </div> -->
   </nav>
   <div
     [ngClass]="{
@@ -121,7 +100,7 @@
         'translate-y-8 opacity-0': !isMenuOpen
         }"
         class="mt-8 transform transition-all duration-500 delay-500">
-          <a (click)="isMenuOpen=false" href="assets/resume.pdf" download="Marcelo_Romero_Resume.pdf" target="_blank" class="inline-flex items-center px-8 py-3 text-lg font-mono border-2 border-accent text-accent rounded-lg hover:bg-accent hover:text-secondary transition-all duration-300">Resume</a>
+          <a href="assets/MarceloRomeroCV.pdf" target='_blank' (click)="toggleMenu()" class="inline-flex items-center px-8 py-3 text-lg font-mono border-2 border-accent text-accent rounded-lg hover:bg-accent hover:text-secondary transition-all duration-300">Resume</a>
         </li>
       </ul>
   </div>
