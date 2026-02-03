@@ -124,7 +124,7 @@ export class AppComponent implements OnDestroy, AfterViewInit{
       image: 'assets/images/mmsolutions2.JPG',
       tags: ['Javascript', 'SwiperJS', 'Daisy UI', 'Tailwind'],
       github: '#',
-      demo: 'https://lambent-lokum-2a0a2c.netlify.app/'
+      demo: 'https://mmsecuritysolutions.netlify.app/'
     },
     {
       title: 'Task Management App',
