@@ -1,17 +1,17 @@
 <div class="min-h-screen bg-primary text-primary-content">
 
   <!-- Navigation -->
-  <nav [class.scrolled]="scrolled" class="fixed w-full top-0 z-50 transition-all duration-300" role="navigation" aria-label="Main navigation">
+  <nav [class.scrolled]="scrolled" class="fixed w-full top-0 z-50 transition-all duration-300 select-none" role="navigation" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16 md:h-20">
         
         <!-- Logo -->
-        <div class="text-2xl font-bold cursor-pointer text-primary-content hover:scale-105 transition-transform duration-300" (click)="scrollToSection('home')">
+        <div class="text-2xl font-bold cursor-pointer text-primary-content hover:scale-105 transition-transform duration-300 select-none" (click)="scrollToSection('home')">
           &lt;ReDo /&gt;
         </div>
 
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
+        <div class="hidden md:flex items-center space-x-4 lg:space-x-8 select-none">
           @for(section of sections; track section; let i = $index){
             <a (click)="scrollToSection(section.toLocaleLowerCase())" class="nav-link group cursor-pointer relative">
               <span class="mr-1 text-accent">0{{i+1}}.</span>
@@ -21,7 +21,7 @@
           }
         </div>
 
-        <div class="hidden md:flex">
+        <div class="hidden md:flex select-none">
           <a href="assets/MarceloRomeroCV.pdf" target="_blank" class="px-4 py-2 rounded-md transition-all border-accent/50 border text-red-500 hover:bg-accent/10 hover:border-accent" aria-label="Download resume PDF">
             Resume
           </a>
