@@ -110,7 +110,7 @@ export class AppComponent implements OnDestroy, AfterViewInit{
       period: '2024',
       description: [
         'Designed and developed a landing page website.',
-        'Implemented Daisy UI.',
+        'Implemented SEO Optimization.',
         'Responsive across all devices.'
       ],
       tags: ['Node.js', 'Javascript', 'SwiperJS', 'Daisy UI', 'Tailwind CSS']
@@ -120,28 +120,28 @@ export class AppComponent implements OnDestroy, AfterViewInit{
   myProjects: Project[] = [
     {
       title: 'Responsive Service Landing',
-      description: 'Fully responsive landing page for security and HVAC services with email and WhatsApp contact.',
+      description: 'Fully responsive and SEO-optimized landing page for security and HVAC services with direct contact channels via email and WhatsApp.',
       image: 'assets/images/mmsolutions2.JPG',
-      tags: ['Javascript', 'SwiperJS', 'Daisy UI', 'Tailwind'],
-      github: '#',
+      tags: ['Javascript', 'SwiperJS', 'Daisy UI', 'Tailwind CSS', 'EmailJS', 'SEO Optimization'],
+      github: 'https://github.com/maedrome/MGMLanding',
       demo: 'https://mmsolutionsg.com/'
     },
     {
-      title: 'Task Management App',
-      description: 'Aplicación de gestión de tareas con funcionalidades de colaboración en tiempo real, drag & drop y notificaciones.',
-      image: 'assets/images/tessoshop.JPG',
-      tags: ['Angular', 'Firebase', 'Tailwind CSS'],
-      github: '#',
-      demo: 'https://tessoshop.netlify.app/#/'
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'Dashboard meteorológico con pronósticos detallados, gráficos interactivos y geolocalización automática.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop',
-      tags: ['Angular', 'Chart.js', 'OpenWeather API'],
-      github: '#',
-      demo: '#'
+      title: 'Sukia Store E-Commerce',
+      description: 'Full-stack e-commerce application with product management, authentication, shopping cart, and PayPhone payment integration.',
+      image: 'assets/images/sukiastore.JPG',
+      tags: ['Angular 19', 'NestJS', 'Tailwind CSS', 'DaisyUI','PostgreSQL', 'TypeORM'],
+      github: 'https://github.com/maedrome/eclat-shop-backend',
+      demo: 'https://sukiastore.com'
     }
+    // {
+    //   title: 'Weather Dashboard',
+    //   description: 'Dashboard meteorológico con pronósticos detallados, gráficos interactivos y geolocalización automática.',
+    //   image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop',
+    //   tags: ['Angular', 'Chart.js', 'OpenWeather API'],
+    //   github: '#',
+    //   demo: '#'
+    // }
   ];
 
   constructor(private fb: FormBuilder) {
